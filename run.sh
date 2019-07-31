@@ -1,0 +1,12 @@
+CUDA_VISIBLE_DEVICES=0,1,2,3 python ./mancs_train.py -d market1501 \
+                                                     -a resnet50 \
+                                                     -b 256 \
+                                                     --num-instances 16 \
+                                                     --data-dir ./data \
+                                                     --logs-dir ./logs/market1501-resnet50/ \
+                                                     --lr 0.0003 \
+                                                     --margin 0.5 \
+                                                     -j 4 \
+                                                     --epochs 150 
+                                                     --combine-trainval \
+                                                     --start_save 100 \
